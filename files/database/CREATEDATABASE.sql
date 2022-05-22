@@ -86,6 +86,7 @@ CREATE TABLE ht06_regvacin (
     rv_nome            VARCHAR2(150) NOT NULL,
     rv_data            DATE NOT NULL,
     rv_vencimento      DATE,
+    rv_notificado      CHAR(1) DEFAULT '0',
     ht05_membro_mb_id  INTEGER NOT NULL
 );
 
@@ -142,7 +143,7 @@ CREATE TABLE r09_ht02_ht04 (
 CREATE TABLE ht11_notificacao (
     nt_id        INTEGER NOT NULL,
     nt_tipo      VARCHAR2(20) NOT NULL,
-    nt_mensagem  VARCHAR2(20) NOT NULL   
+    nt_mensagem  VARCHAR2(150) NOT NULL   
 );
 
 CREATE TABLE ht12_erro (
